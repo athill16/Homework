@@ -1,3 +1,3 @@
 def coin_change(amount)
-	coins = {"quarters" => amount, "dimes" => amount, "nickels" => amount, "pennies" => amount}
+	coins = {"quarters" => 0, "dimes" => 0, "nickels" => 0, "pennies" => amount}
 end
