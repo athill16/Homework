@@ -1,6 +1,8 @@
 def coin_change(amount)
 	coins = {"quarters" => 0, "dimes" => 0, "nickels" => 0, "pennies" => 0}
-	if amount >= 15
+	if amount >= 25
+		coins["quarters"] = 1
+	elsif amount >= 15
 		coins["dimes"] = 1
 		coins["nickels"] = 1
 		coins["pennies"] = amount - 15
