@@ -1,11 +1,13 @@
 def coin_change(amount)
-	if amount == 10
-		coins = {"quarters" => 0, "dimes" => 1, "nickels" => 0, "pennies" => 0}
-	elsif amount == 5
-		coins = {"quarters" => 0, "dimes" => 0, "nickels" => 1, "pennies" => 0}
-	elsif amount == 6
-		coins = {"quarters" => 0, "dimes" => 0, "nickels" => 1, "pennies" => 1}
+	coins = {"quarters" => 0, "dimes" => 0, "nickels" => 0, "pennies" => 0}
+	if amount >= 10
+		coins["dimes"] = 1
+		coins["pennies"] = amount - 10
+	elsif amount >= 5
+		coins["nickels"] = 1 
+		coins["pennies"] = amount - 5
 	else
 	coins = {"quarters" => 0, "dimes" => 0, "nickels" => 0, "pennies" => amount}
 	end
+	coins
 end
