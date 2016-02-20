@@ -3,6 +3,7 @@ def coin_change(amount)
 	if amount >= 15
 		coins["dimes"] = 1
 		coins["nickels"] = 1
+		coins["pennies"] = amount - 15
 	elsif amount >= 10
 		coins["dimes"] = 1
 		coins["pennies"] = amount - 10
